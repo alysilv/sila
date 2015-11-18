@@ -1,0 +1,197 @@
+/*
+Theme Name: Hotec Child
+Template: Hotec
+Author: Trang Huynh
+*/
+
+@import url("../Hotec/style.css");
+
+/*----------------------
+ Start child style
+------------------------*/
+
+/* Title font */
+@font-face {
+ font-family: 'Square';
+ src: url('fonts/Square-721.ttf');
+}
+
+
+h1, h2, h3, h4, h5, h6, .subscribe_section label, .widget_calendar caption, .header-right {
+ font-family: 'Square' !important;
+ line-height: 1.2;
+}
+
+
+
+/*-------------*/
+body {
+ height: auto !important;
+ line-height: 1.5 !important;
+ font: 1em 'Arial', 'sans-serif' ;
+}
+
+
+/* ---- Header --------*/
+#header { width: 100%; position: absolute; top: 0; }
+.header-outer-wrapper {
+ -webkit-box-shadow: none;
+ -moz-box-shadow: none;
+ box-shadow: none;
+ width: 100%;
+ background: transparent !important;
+}
+
+.header-outer-wrapper .header-wrapper,
+.header-outer-wrapper .header-left,
+.header-outer-wrapper .header-right {max-height: 80px;}
+.header-wrapper { margin: 0 15px; }
+.header-wrapper .row { width: 100% !important;}
+
+/* Sticky Header */
+#sticky_header { 
+ background: #ffffff; 
+ display: none; 
+ position: fixed; 
+ top: 0; 
+ z-index: 999; 
+ width:100%;
+ -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+ -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+ box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#sticky_header .header_scroll { background: #ffffff;}
+#sticky_header .header_scroll >ul >li >a {  line-height: 80px !important;}
+#sticky_header .header_scroll ul li a { color: #000000; }
+#sticky_header .header_scroll ul li a:hover, .header_scroll ul li a:focus { color:#4BACC6; }
+#sticky_header .header-outer-wrapper .header-wrapper .logo-wrapper img { max-height:80px; margin: 0 0 0 50px;}
+#sticky_header .slideMenu ul >li.menu-item-has-children >a:after { color: #000000;}
+#sticky_header .header_scroll ul li ul.sub-menu >li >a { color: #ffffff;}
+#sticky_header .header_scroll ul li ul.sub-menu >li >a:hover,
+#sticky_header .header_scroll ul li ul.sub-menu >li >a:focus { color: #4BACC6;}
+
+ /* Top Nav */
+.top-bar-outer-wrapper { background: transparent;}
+.top-bar-outer-wrapper a, .top-bar-contact span span { color: #333333;}
+.top-nav.slideMenu ul li a, .top-nav.slideMenu ul li ul li a { color: #ffffff;}
+.top-nav ul li a:hover, .top-nav.slideMenu ul li ul li a:hover { color: #4BACC6;}
+.top-bar-left.left { padding: 4px;}
+.top-bar-right { padding: 0px; margin-right: 0;}
+.top-bar-contact { padding-top: 2px;}
+.top-bar-address, .top-bar-phone { background-position: left; padding-left: 14px;}
+
+/* Main Menu */
+.slideMenu { display: inline-block;}
+.slideMenu >ul >li >a { text-transform: capitalize; line-height: 80px; padding: 0 18px; color: #ffffff; font-size: 15px; line-height: 80px !important;}
+.slideMenu >ul >li >a:hover, .slideMenu >ul >li >a:focus { color: #4BACC6;}
+.slideMenu ul >li.menu-item-has-children >a:after {
+ content: '\f0d7';
+ font-family: 'FontAwesome';
+ color: #ffffff;
+ margin-left: 10px;
+ font-size: 12px;
+}
+.slideMenu ul >li.menu-item-has-children >a >span { margin-right: 5px;}
+
+/* Sub menu */
+.slideMenu ul li ul.sub-menu { background: rgba(0,0,0,0.5);}
+.slideMenu ul li.menu-item-has-children:hover >ul, .slideMenu ul li.menu-item-has-children:focus >ul {
+ display: block;
+ visibility: visible;
+ top: 60px;
+}
+.slideMenu ul li ul li a { min-width: 170px; text-transform: capitalize!important; font-size: 1em; color: #ffffff;}
+.slideMenu ul li ul li a:hover, .slideMenu ul li ul li a:focus { color: #4BACC6;}
+.primary-nav { margin-left: 50px;}
+.language-nav { margin-right: 15px;}
+
+/* Logo */
+.header-outer-wrapper .header-wrapper .logo-wrapper,
+.header-outer-wrapper .header-wrapper h1 { display: inline-block; float: left;}
+.header-outer-wrapper .header-wrapper .logo-wrapper img { margin: 15px 0px 15px 50px; max-height: 200px;}
+@media only screen and (max-width: 767px) {
+ .top-bar-right { display: block !important;}
+ .top-bar-left { display: none !important;}
+ .qtranxs-lang-menu ul.sub-menu { left: 0 !important;}
+}
+
+#sttotop { bottom: 20px;}
+.row { width: 100%;}
+.row .row { margin: 0 auto;}
+.field_text { text-align: left;}
+
+
+
+/*------- Slider ------*/
+
+/* Top Slider */
+.slider-outer-wrapper .shadow-box { display: none;}
+
+/* Sections */
+.section_title {
+ color: #4BACC6;
+ font-size: 2.5em;
+ text-align: center;
+ margin: 50px auto 30px;
+ display: inline-block;
+ padding-left: 20px;
+ padding-right:20px;
+}
+.section_page_wrap {
+ display: table;
+ table-layout: fixed;
+ overflow: hidden;
+ position: relative;
+ width:100%;
+ height:100%;
+ padding-top: 50px;
+ padding-bottom: 50px;
+ /*opacity: 0;*/
+}
+.section_page_wrap .section_content {
+ margin: -150px auto 0 auto;
+ display: table-cell;
+ vertical-align: middle;
+ color: #ebebeb;
+ padding: 0 8%;
+ text-align: center;
+ max-width: 1280px;
+}
+
+
+.builder-title-wrapper.has_filter { margin-bottom: 15px;}
+.builder-title-wrapper.has_filter .cpt-filters { position: relative; top: 0;}
+.builder-item-wrapper .builder-item-title { color: #4BACC6; font-size: 1.5em; text-align: center;}
+
+
+/* Section Hotel Rooms */
+#hotel-rooms .bcg {
+ background: none;
+ background-color: #ffffff;
+ text-align: center;
+}
+
+
+/* Section Facilities */
+#facilities-services .bcg {
+ background-image:url('images/hotel_rooms_bcg.jpg');
+}
+.service-wrapper { background: rgba(0,0,0,0.5); padding: 10px;}
+.service-title { color: #ffffff;}
+
+
+ /* Section About us */
+#about-us .bcg {
+ background-image: url('images/Facilities-services_bcg.jpg');
+}
+#about-us .row .four >div { background: rgba(0,0,0,0.5); padding: 10px;}
+#about-us .section_title { display: none;}
+.form-row textarea { height: auto;}
+.bcg {
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ height: 100%;
+ width: 100%;
+}
