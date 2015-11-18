@@ -58,6 +58,19 @@ function get_childs($pageID){
     return $pages;
 }
 
+add_action('init', 'remove_parent_theme_shortcodes');
+function remove_parent_theme_shortcodes(){
+    remove_shortcode( 'this_entry' );
+    add_shortcode( 'this_entry', 'get_page_content' );
+}
+
+function get_page_content(){
+    $id = get_page_id_from_url();
+    $page = get_post($id);
+    $content = $page->post_content;
+    return $content;
+}
+
 /* Change shortcode This Entry */
 function get_page_id_from_url(){
     $id=5;
@@ -65,14 +78,9 @@ function get_page_id_from_url(){
 
     return $id;
 }
-remove_shortcode( 'this_entry', 'st_this_entry_func' );
-add_shortcode( 'this_entry', 'get_page_content' );
-function get_page_content(){
-    $id = get_page_id_from_url();
-    $page = get_post($id);
-    $content = $page->post_content;
-    return $content;
-}
+
+
+
 
 
 

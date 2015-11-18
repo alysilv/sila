@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body id="skrollr-body" <?php body_class(); ?> >
 
    <div class="body-outer-wrapper">
     <div class="body-wrapper <?php echo st_boxed_class(); ?>">
